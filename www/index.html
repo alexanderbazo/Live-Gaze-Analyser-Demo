@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Live Gaze Analyser</title>
+    <link rel="stylesheet" href="resources/css/default.css">
+</head>
+
+<body>
+    <div id="startScreen">
+        <div id="startTitle">Live Gaze Analyser</div>
+        <div id="startMenu">
+            <h1>Options</h1>
+            <span class="option">
+                <input type="checkbox" id="useMouseInput" name="useMouseInput">
+                <label for="useMouseInput">Use mouse input</label>
+            </span>
+            <span class="option">
+                <input type="checkbox" id="isObserver" name="isObserver">
+                <label for="isObserver">Observer mode</label>
+            </span>
+            <span class="option">
+                <label for="viewerServerUrl">Server</label>
+                <input type="url" id="viewerServerUrl" name="viewerServerUrl" value="ws://localhost:2568">
+            </span>
+        </div>
+        <div class="startButton">Start</div>
+    </div>
+    <div id="stage" class="hidden">
+        <canvas class="background"></canvas>
+        <canvas class="gaze"></canvas>
+        <div id="task">
+            <div class="task-description"></div>
+            <div class="task-source"></div>
+        </div>
+    </div>
+  
+
+    <script type="application/javascript" src="vendors/gazeclient.js"></script>
+    <script type="application/javascript" src="vendors/colyseus.js"></script>
+    <script type="module" src="resources/js/index.js"></script>
+</body>
+
+</html>
