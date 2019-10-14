@@ -60,6 +60,7 @@ class ImageViewer {
       image = new Image();
     image.src = imageUrl;
     image.onload = function() {
+      that.backgroundContext.clearRect(0, 0, screen.width, screen.height);
       that.backgroundContext.drawImage(image, 0, 0);
     };
   }
